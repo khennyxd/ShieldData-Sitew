@@ -757,3 +757,72 @@ html, body { overflow-x: hidden; }
   .marquee-track { animation: none; }
   * { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
 }
+
+/* ================================================================
+   AJUSTES EXCLUSIVOS DE MOBILE (≤639px)
+   Os tokens de espaçamento/tipografia só são redefinidos dentro
+   deste media query — nada aqui afecta tablet/desktop, que continuam
+   a usar os valores base e os seus próprios breakpoints min-width.
+   ================================================================ */
+@media (max-width: 639px) {
+  :root {
+    --text-lg: 18px;
+    --text-xl: 21px;
+    --text-2xl: 24px;
+    --text-3xl: 28px;
+    --text-4xl: 32px;
+    --text-5xl: 36px;
+
+    --space-7: 32px;
+    --space-8: 40px;
+    --space-9: 56px;
+    --space-10: 72px;
+    --space-11: 80px;
+  }
+
+  .container { padding: 0 var(--space-4); }
+
+  .hero { padding: calc(var(--space-9) + 24px) 0 var(--space-8); }
+  .hero-copy h1 { font-size: var(--text-4xl); letter-spacing: -0.025em; }
+  .hero-copy p.lede { font-size: var(--text-base); }
+  .hero-actions { margin-top: var(--space-6); gap: var(--space-3); }
+  .hero-actions .btn { padding: var(--space-3) var(--space-5); font-size: var(--text-sm); }
+  .hero-stats { margin-top: var(--space-7); gap: var(--space-4); }
+  .hero-stats .stat b { font-size: var(--text-xl); }
+  .hero-stats .stat span { font-size: 11px; }
+
+  .seal-wrap { max-width: 168px; margin-top: var(--space-7); }
+  .seal-photo-caption { font-size: 11px; margin-top: var(--space-4); }
+
+  .section-head { margin-bottom: var(--space-6); }
+  .section-head p { font-size: var(--text-base); }
+
+  .diagnostic-panel { padding: var(--space-6) var(--space-5); }
+  .diagnostic-top h3 { font-size: var(--text-xl); }
+
+  .solution-card { padding: var(--space-5); }
+  .solution-icon { width: 36px; height: 36px; margin-bottom: var(--space-4); }
+
+  .about-media img { aspect-ratio: 16/11; }
+
+  .values { gap: var(--space-4); margin-top: var(--space-6); }
+
+  .law-callout { padding: var(--space-5); margin-top: var(--space-7); }
+
+  .plan { padding: var(--space-6) var(--space-5); }
+  .plan.is-featured { transform: none; }
+  .plan .price b { font-size: var(--text-2xl); }
+
+  .faq-q { font-size: var(--text-base); padding: var(--space-5) 0; }
+
+  .contact .section-head p { font-size: var(--text-base); }
+  .contact-info-item p, .contact-info-item a { font-size: var(--text-base); }
+
+  .final-cta h2 { font-size: var(--text-3xl); }
+
+  .brand-logo { height: 36px; }
+  .brand { font-size: var(--text-base); gap: var(--space-2); }
+
+  .footer-grid { gap: var(--space-6); }
+  .footer-brand p { font-size: var(--text-sm); }
+}
